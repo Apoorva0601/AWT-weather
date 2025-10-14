@@ -1,0 +1,348 @@
+/* 
+ * Weather Web App - Custom Styles
+ * This file contains all custom CSS for the weather application
+ */
+
+/* Root Variables for easy theme management */
+:root {
+    --sunny-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --clear-gradient: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+    --cloudy-gradient: linear-gradient(135deg, #757F9A 0%, #D7DDE8 100%);
+    --rainy-gradient: linear-gradient(135deg, #4B79A1 0%, #283E51 100%);
+    --stormy-gradient: linear-gradient(135deg, #232526 0%, #414345 100%);
+    --snowy-gradient: linear-gradient(135deg, #E6DADA 0%, #274046 100%);
+    --misty-gradient: linear-gradient(135deg, #bdc3c7 0%, #2c3e50 100%);
+    --default-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Body Styling - Default background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--default-gradient);
+    background-attachment: fixed;
+    min-height: 100vh;
+    transition: background 0.5s ease;
+}
+
+/* Dynamic Background Classes based on weather conditions */
+body.clear {
+    background: var(--clear-gradient);
+}
+
+body.clouds {
+    background: var(--cloudy-gradient);
+}
+
+body.rain, body.drizzle {
+    background: var(--rainy-gradient);
+}
+
+body.thunderstorm {
+    background: var(--stormy-gradient);
+}
+
+body.snow {
+    background: var(--snowy-gradient);
+}
+
+body.mist, body.fog, body.haze {
+    background: var(--misty-gradient);
+}
+
+body.sunny {
+    background: var(--sunny-gradient);
+}
+
+/* Header Styling */
+header h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 0.8s ease;
+}
+
+/* Search Section Styling */
+.search-section {
+    animation: fadeInUp 0.8s ease;
+}
+
+.search-section .card {
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.search-section input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    border-color: #0d6efd;
+}
+
+/* Weather Card Styling */
+.weather-card {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    animation: slideIn 0.5s ease;
+}
+
+.city-name {
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+.country {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.date {
+    font-size: 0.95rem;
+}
+
+/* Weather Icon */
+.weather-icon {
+    width: 120px;
+    height: 120px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Temperature Display */
+.temperature {
+    color: #2c3e50;
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.weather-desc {
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+/* Weather Details Cards */
+.weather-detail {
+    background: rgba(13, 110, 253, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(13, 110, 253, 0.1);
+}
+
+.weather-detail:hover {
+    background: rgba(13, 110, 253, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Forecast Section */
+.forecast-section h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+}
+
+.forecast-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: none;
+    backdrop-filter: blur(10px);
+}
+
+.forecast-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-day {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.forecast-date {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+}
+
+.forecast-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.forecast-temp {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.forecast-desc {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    text-transform: capitalize;
+}
+
+/* Loading Spinner */
+#loadingSpinner {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Error Message */
+#errorMessage {
+    animation: shake 0.5s ease;
+    border-radius: 10px;
+}
+
+/* Button Hover Effect */
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Footer Styling */
+footer a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .temperature {
+        font-size: 3rem;
+    }
+    
+    .weather-icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .city-name {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .temperature {
+        font-size: 2.5rem;
+    }
+    
+    .weather-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .weather-detail {
+        padding: 0.75rem !important;
+    }
+    
+    .weather-detail i {
+        font-size: 1.5rem !important;
+    }
+    
+    .weather-detail h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
