@@ -1,9 +1,3 @@
-/* 
- * Weather Web App - Custom Styles
- * This file contains all custom CSS for the weather application
- */
-
-/* Root Variables for easy theme management */
 :root {
     --sunny-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --clear-gradient: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
@@ -15,7 +9,6 @@
     --default-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-/* Body Styling - Default background */
 body {
     margin: 0;
     padding: 0;
@@ -26,7 +19,6 @@ body {
     transition: background 0.5s ease;
 }
 
-/* Dynamic Background Classes based on weather conditions */
 body.clear {
     background: var(--clear-gradient);
 }
@@ -55,13 +47,11 @@ body.sunny {
     background: var(--sunny-gradient);
 }
 
-/* Header Styling */
 header h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     animation: fadeInDown 0.8s ease;
 }
 
-/* Search Section Styling */
 .search-section {
     animation: fadeInUp 0.8s ease;
 }
@@ -76,7 +66,6 @@ header h1 {
     border-color: #0d6efd;
 }
 
-/* Weather Card Styling */
 .weather-card {
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.95);
@@ -99,7 +88,6 @@ header h1 {
     font-size: 0.95rem;
 }
 
-/* Weather Icon */
 .weather-icon {
     width: 120px;
     height: 120px;
@@ -107,7 +95,6 @@ header h1 {
     animation: float 3s ease-in-out infinite;
 }
 
-/* Temperature Display */
 .temperature {
     color: #2c3e50;
     font-size: 4rem;
@@ -119,7 +106,6 @@ header h1 {
     font-weight: 500;
 }
 
-/* Weather Details Cards */
 .weather-detail {
     background: rgba(13, 110, 253, 0.05);
     transition: all 0.3s ease;
@@ -132,7 +118,6 @@ header h1 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Forecast Section */
 .forecast-section h3 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     font-weight: 600;
@@ -179,18 +164,15 @@ header h1 {
     text-transform: capitalize;
 }
 
-/* Loading Spinner */
 #loadingSpinner {
     animation: fadeIn 0.3s ease;
 }
 
-/* Error Message */
 #errorMessage {
     animation: shake 0.5s ease;
     border-radius: 10px;
 }
 
-/* Button Hover Effect */
 .btn-primary {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border: none;
@@ -203,7 +185,6 @@ header h1 {
     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 }
 
-/* Footer Styling */
 footer a {
     text-decoration: none;
     font-weight: 600;
@@ -213,7 +194,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -277,7 +257,6 @@ footer a:hover {
     }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2.5rem;
@@ -324,12 +303,10 @@ footer a:hover {
     }
 }
 
-/* Smooth Scroll */
 html {
     scroll-behavior: smooth;
 }
 
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
 }
