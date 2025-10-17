@@ -2,7 +2,6 @@
 A beautiful, responsive weather application built with HTML, CSS, JavaScript, jQuery, and Bootstrap 5. Get real-time weather information and 5-day forecasts for any city in the world.
 
 ## Features ✨
-
 - **Real-time Weather Data**: Fetch current weather information from OpenWeatherMap API
 - **5-Day Forecast**: View detailed weather predictions for the next 5 days
 - **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile devices
